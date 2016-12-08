@@ -1,0 +1,7 @@
+#define RELEASE
+#define CONVERT
+
+#define LANDEDITION "UNH"
+#define PICTURE_DIRECTORY 
+#define DEBUGDECK 
+#define DATABASEDIRECTORY
