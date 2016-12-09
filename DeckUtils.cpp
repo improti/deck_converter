@@ -130,7 +130,7 @@ void DeckUtils::convert_deck(std::string name)
     for (std::list<Card*>::iterator it = l.begin(); it != l.end(); ++it) {
         if ((*it)->GetName() == "Island" || (*it)->GetName() == "Plains" || (*it)->GetName() == "Swamp" ||
             (*it)->GetName() == "Mountain" || (*it)->GetName() == "Forest")
-            	deck.replaceCard(new Card((*it)->GetName(), LANDEDITION,mdb.getCardNumber((*it)->GetName(),LANDEDITION)));
+            deck.replaceCard(new Card((*it)->GetName(), LANDEDITION,mdb.getCardNumber((*it)->GetName(),LANDEDITION)));
         else {
             std::multimap<std::string,std::string> mmap = mdb.getExpansionNumber((*it)->GetName());
             std::string expansion,number;
