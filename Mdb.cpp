@@ -3,7 +3,9 @@
 // Constructor
 Mdb::Mdb()
 {
-	if (sqlite3_open(DATABASEDIRECTORY,&(this->db)) != SQLITE_OK)
+	if (sqlite3_open(DATABASEDIRECTORY,&(this->db)) == SQLITE_OK)
+		std::cout << "Connected to database '" << DATABASEDIRECTORY << "'.\n";
+	else
 		std::cerr << "ERROR: Database '" << DATABASEDIRECTORY << "' could not be opened!\n";
 }
 
