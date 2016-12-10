@@ -4,7 +4,7 @@
 Mdb::Mdb()
 {
 	if (sqlite3_open(DATABASEDIRECTORY,&(this->db)) != SQLITE_OK)
-		std::cout << "ERROR: Database '" << DATABASEDIRECTORY << "' could not be opened!\n";
+		std::cerr << "ERROR: Database '" << DATABASEDIRECTORY << "' could not be opened!\n";
 }
 
 // Destructor
