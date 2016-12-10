@@ -1,10 +1,13 @@
 #include "Mdb.h"
 
+// Constructor
 Mdb::Mdb()
 {
-  if( sqlite3_open(DATABASEDIRECTORY,&(this->db)) != SQLITE_OK) std::cout << "Database could not be opened\n";
+	if (sqlite3_open(DATABASEDIRECTORY,&(this->db)) != SQLITE_OK)
+		std::cout << "ERROR: Database '" << DATABASEDIRECTORY << "' could not be opened!\n";
 }
 
+// Destructor
 Mdb::~Mdb()
 {
     sqlite3_close(this->db);
