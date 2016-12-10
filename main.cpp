@@ -15,7 +15,7 @@ int main(int argc, char** argv)
 #ifdef RELEASE
     // check for parameters and exit if none supplied
     if (!argv[1]) {
-    	std::cout << "No parameters supplied, terminating.";
+    	std::cerr << "ERROR: No parameters supplied, terminating.";
     	return(-1);
     }
     std::cout << "Converting: " << argv[1] << " ...\n";
