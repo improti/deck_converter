@@ -13,7 +13,12 @@ int main(int argc, char** argv)
     string deckname;
     Mdb mdb;
 #ifdef RELEASE
-    std::cout << "Konvertiere: " << argv[1] << "...\n";
+    // check for parameters and exit if none supplied
+    if (!argv[1]) {
+    	std::cout << "No parameters supplied, terminating.";
+    	return(-1);
+    }
+    std::cout << "Converting: " << argv[1] << " ...\n";
     deckname = argv[1];
 #else
     deckname = DEBUGDECK;
