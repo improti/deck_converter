@@ -150,9 +150,9 @@ void DeckUtils::convert_deck(std::string name)
             if(p_size > 0) deck.replaceCard(new Card((*it)->GetName(),expansion,number));
             else{
                 if(exps.str().length() == 0)
-                    std::cout << "Karte \"" << (*it)->GetName() << "\" ist nicht implementiert.\n";
+                    std::cout << "Card '" << (*it)->GetName() << "' not found in the database. It's probably not implemented yet.\n";
                 else
-                    std::cout << "Kein Bild gefunden für: " << (*it)->GetName() << " - Expansionen: " << exps.str() << "\n";
+                    std::cout << "No image found for card: '" << (*it)->GetName() << "' - expansions: " << exps.str() << "\n";
             }
         }
         ss.str("");
