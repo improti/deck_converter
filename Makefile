@@ -4,8 +4,8 @@ all:
 	g++  -c  "Deck.cpp" -g -O0 -Wall -std=c++11  -o Deck.cpp.o -I.
 	g++  -c  "Mdb.cpp" -g -O0 -Wall -std=c++11  -o Mdb.cpp.o -I.
 	g++  -c  "main.cpp" -g -O0 -Wall -std=c++11  -o main.cpp.o -I.
-	g++ -pthread -std=c++11 main.cpp.o Deck.cpp.o Card.cpp.o DeckUtils.cpp.o Mdb.cpp.o -lsqlite3 -ldl -o deck_convertor
+	g++ -pthread -std=c++11 main.cpp.o Deck.cpp.o Card.cpp.o DeckUtils.cpp.o Mdb.cpp.o -lsqlite3 -ldl -o deck_converter
   
 clean:
 	rm *.o
-	rm deck_convertor
+	rm deck_converter
