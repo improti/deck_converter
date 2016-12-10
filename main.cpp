@@ -10,8 +10,8 @@
 int main(int argc, char** argv)
 {
     // https://www.c-plusplus.net/forum/155621-full
-    string deckname;
-    Mdb mdb;
+	string deckname;
+	Mdb mdb;
 #ifdef RELEASE
     // check for parameters and exit if none supplied
     if (!argv[1]) {
